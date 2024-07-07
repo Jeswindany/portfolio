@@ -106,7 +106,7 @@ a {
 }
 
 body {
-    background-color: var(--primary);
+    background-color: var(--shadow);
 }
 
 #home {
@@ -135,6 +135,7 @@ body {
 
 #about {
     padding-bottom: 50px;
+    background-color: var(--primary);
 }
 
 .heading {
@@ -144,7 +145,7 @@ body {
 }
 
 .heading:first-child {
-    margin-top: 30px;
+    padding-top: 30px;
 }
 
 .card {
@@ -218,6 +219,7 @@ body {
 }
 
 .project-card {
+    width: 567.84px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,11 +240,11 @@ body {
 
 .btns {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .btns > button {
-    width: 50%;
+    width: 40%;
     background: none;
     background-color: var(--primary);
     border: 2px solid var(--text-color);
@@ -250,7 +252,7 @@ body {
     padding: 7px;
     font-size: 15px;
     font-weight: 900;
-    margin: 30px 20px;
+    margin: 30px 0px;
     transition: transform 150ms ease-in;
 }
 
@@ -263,7 +265,7 @@ body {
 }
 
 .project-img {
-    width: 400px;
+    width: 100%;
     border-radius: 20px;
     filter: opacity(0.75);
 }
@@ -275,6 +277,7 @@ body {
 #contact {
     display: flex;
     flex-direction: row;
+    background-color: var(--primary);
 }
 
 #contact-me {
@@ -312,6 +315,7 @@ footer {
     align-items: center;
     height: 50px;
     font-weight: 700;
+
 }
 
 @media (max-width: 600px) {
@@ -332,6 +336,10 @@ footer {
     #home {
         flex-direction: column;
         justify-content: center;
+    }
+
+    .project-card {
+        width: 80%;
     }
 
     #contact {
