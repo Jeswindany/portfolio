@@ -30,8 +30,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0px;
+    position: fixed;
     background-color: var(--primary);
     z-index: 1;
 }
