@@ -1,15 +1,30 @@
-var menubar = document.getElementById("menu-bar")
+const navbar = document.getElementById("navbar");
+const menubar = document.getElementById("menu-bar");
+const collapseMenu = document.getElementById("collapse-menu");
+const collapseMenuItems = document.getElementById("collapse-menu");
+const menuIcon = document.getElementById("menu-bar");
 
 function openCollapseMenu() {
-    var collapse = document.getElementById("collapse-menu")
-    if (collapse.style.height === "0px" || collapse.style.height === "") {
-        collapse.style.height = collapse.scrollHeight + "px";
+    if (collapseMenu.style.height === "0px" || collapseMenu.style.height === "") {
+        collapseMenu.style.height = collapseMenu.scrollHeight + "px";
     } else {
-        collapse.style.height = "0px";
+        collapseMenu.style.height = "0px";
     }
 }
 
-menubar.addEventListener('click', openCollapseMenu)
+let prevScrollpos = window.scrollY;
+window.onscroll = function() {
+  var currentScrollPos = window.scrollY;
+  if (prevScrollpos > currentScrollPos) {
+    navbar.style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-66.4px";
+    collapseMenu.style.height = "0px";
+  }
+  prevScrollpos = currentScrollPos;
+}
 
-var cpYear = document.getElementById("year");
+menubar.addEventListener('click', openCollapseMenu);
+
+const cpYear = document.getElementById("year");
 cpYear.innerHTML = new Date().getFullYear();
