@@ -12,12 +12,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="nav-bar">
+    <div id="navbar">
         <div class="main-nav">
             <h1 id="name">Jeswin Paul Dany</h1>
             <ul class="links">
@@ -63,7 +64,7 @@
         <div id="education">
             <div class="card">
                 <h3 class="card-title">Sri Venkateswara College of Engineering (SVCE)</h3>
-                <h6 class="card-details">BE CSE 2022 - 2026 <br> CGPA: 8.72</h6>
+                <h6 class="card-details">BE CSE 2022 - 2026 <br> CGPA: 8.69</h6>
             </div>
             <div class="card">
                 <h3 class="card-title">Our Angel Matriculation Higher Secondary School</h3>
@@ -112,31 +113,62 @@
 
     <div id="projects">
         <h2 class="heading">Projects</h2>
-        <div class="project-card">
-            <img class="project-img" src="assets/imgs/tic-tac-toe.png" alt="tic-tac-toe">
-            <div class="btns">
-                <button onclick="window.open('https://github.com/Jeswindany/Tic-tac-toe', '_blank')">Source
-                    Code</button>
-                <button onclick="window.open('https://jeswindany.github.io/Tic-tac-toe/', '_blank')">Demo</button>
+
+        <div id="projectsSlide" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#projectsSlide" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#projectsSlide" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#projectsSlide" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
             </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="project-card">
+                        <img class="project-img" src="assets/imgs/tic-tac-toe.png" alt="tic-tac-toe">
+                        <div class="btns">
+                            <button onclick="window.open('https://github.com/Jeswindany/Tic-tac-toe', '_blank')">Source
+                                Code</button>
+                            <button
+                                onclick="window.open('https://jeswindany.github.io/Tic-tac-toe/', '_blank')">Demo</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="project-card">
+                        <img class="project-img" src="assets/imgs/Calculator.png" alt="calculator">
+                        <div class="btns">
+                            <button onclick="window.open('https://github.com/Jeswindany/Calculator', '_blank')">Source
+                                Code</button>
+                            <button
+                                onclick="window.open('https://jeswindany.github.io/Calculator/', '_blank')">Demo</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="project-card">
+                        <img class="project-img" src="assets/imgs/bmi.png" alt="bmi-calculator">
+                        <div class="btns">
+                            <button
+                                onclick="window.open('https://github.com/Jeswindany/BMI-Calculator', '_blank')">Source
+                                Code</button>
+                            <button
+                                onclick="window.open('https://jeswindany.github.io/BMI-Calculator/', '_blank')">Demo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectsSlide" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectsSlide" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
 
-        <div class="project-card">
-            <img class="project-img" src="assets/imgs/bmi.png" alt="bmi-calculator">
-            <div class="btns">
-                <button onclick="window.open('https://github.com/Jeswindany/BMI-Calculator', '_blank')">Source
-                    Code</button>
-                <button onclick="window.open('https://jeswindany.github.io/BMI-Calculator/', '_blank')">Demo</button>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <img class="project-img" src="assets/imgs/Calculator.png" alt="calculator">
-            <div class="btns">
-                <button onclick="window.open('https://github.com/Jeswindany/Calculator', '_blank')">Source Code</button>
-                <button onclick="window.open('https://jeswindany.github.io/Calculator/', '_blank')">Demo</button>
-            </div>
-        </div>
     </div>
 
     <div id="contact">
@@ -175,7 +207,9 @@
         <p>Copyright © <span id=year></span> Jeswin Paul Dany </p>
     </footer>
 
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
