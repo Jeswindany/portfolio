@@ -20,14 +20,15 @@
     cursor: pointer;
 }
 
-.nav-bar {
+#navbar {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: fixed;
     background-color: var(--primary);
-    z-index: 1;
+    transition: top 0.2s ease-in-out;
+    z-index: 2;
 }
 
 .main-nav {
@@ -45,6 +46,8 @@
     width: 300px;
     height: 100%;
     margin-right: 20px;
+    margin-bottom: 0px;
+    padding-left: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -78,7 +81,7 @@ a {
     height: 0;
     width: 100%;
     overflow: hidden;
-    transition: height 0.5s ease-out;
+    transition: height 0.2s ease-out;
 }
 
 #collapse-menu-items {
@@ -89,6 +92,8 @@ a {
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
 }
 
 .collapse-menu-item {
@@ -122,6 +127,10 @@ body {
     width: 300px;
     border-radius: 50%;
     margin: 50px;
+}
+
+h2 {
+    font-size: 6vw;
 }
 
 #description{
@@ -211,31 +220,34 @@ body {
 }
 
 #projects {
+    height: 700px;
+    width: 100%;
     background-color: var(--shadow);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .project-card {
-    width: 567.84px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 30px;
+    margin: 30px 250px;
     background-color: var(--primary);
     border: 5px solid var(--primary);
     border-radius: 20px;
     transition: transform 150ms ease-in;
+    margin-bottom: 75px;
+}
+
+.carousel-indicators {
+    z-index: 1;
 }
 
 .project-card:hover {
     transform: scale(1.1);
-}
-
-.project-card:last-child {
-    margin-bottom: 70px;
 }
 
 .btns {
@@ -315,11 +327,14 @@ footer {
     align-items: center;
     height: 50px;
     font-weight: 700;
+}
 
+footer p {
+    margin-bottom: 0px;
 }
 
 @media (max-width: 600px) {
-    .nav-bar {
+    #navbar {
         justify-content: space-between;
         align-items: center;
     }
@@ -339,7 +354,17 @@ footer {
     }
 
     .project-card {
-        width: 80%;
+        width: 350px;
+    }
+
+    .project-card:hover {
+        transform: none;
+    }
+
+    .project-card button {
+        margin: 10px 0px;
+        font-size: 10px;
+        width: 40%;
     }
 
     #contact {
@@ -367,7 +392,7 @@ footer {
         display: none;
     }
 
-    .nav-bar {
+    #navbar {
         justify-content: right;
     }
 }
@@ -375,5 +400,9 @@ footer {
 @media (min-width: 600px){
     #collapse-menu {
         display: none;
+    }
+    .project-card {
+        min-width: 500px;
+        max-width: 600px;
     }
 }
