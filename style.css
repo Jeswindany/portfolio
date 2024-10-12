@@ -228,6 +228,7 @@ h2 {
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
 .project-card {
@@ -333,6 +334,12 @@ footer p {
     margin-bottom: 0px;
 }
 
+@media (max-width: 1000px) {
+    .carousel-indicators {
+        display: hidden;
+    }
+}
+
 @media (max-width: 600px) {
     #navbar {
         justify-content: space-between;
@@ -355,10 +362,6 @@ footer p {
 
     .project-card {
         width: 350px;
-    }
-
-    .project-card:hover {
-        transform: none;
     }
 
     .project-card button {
