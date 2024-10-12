@@ -334,9 +334,10 @@ footer p {
     margin-bottom: 0px;
 }
 
+
 @media (max-width: 1000px) {
-    .carousel-indicators {
-        display: hidden;
+    .carousel-control-prev, .carousel-control-next {
+        display: none;
     }
 }
 
