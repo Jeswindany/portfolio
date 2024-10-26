@@ -319,6 +319,11 @@ h2 {
     font-size: 20px;
     font-style: italic;
     font-weight: 500;
+    transition: transform 200ms ease-in-out;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
 }
 
 footer {
