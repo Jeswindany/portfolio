@@ -1,3 +1,12 @@
+// Animated Name
+var typed = new Typed('#animatedName', {
+  strings: ["Hi^1000, I'm Jeswin"],
+  typeSpeed: 70,
+  showCursor: false,
+});
+
+//Collapse Menu Handling
+
 const navbar = document.getElementById("navbar");
 const menubar = document.getElementById("menu-bar");
 const collapseMenu = document.getElementById("collapse-menu");
